@@ -1,0 +1,345 @@
+:root{
+    --main-color: #caa07d;
+    --black: #1a1613;
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    font-size: 10px;
+    --white: #ffffff;
+
+
+
+}
+
+*{
+    font-family: "Playfair Display", serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+body{
+    background: url("../imagens/test.jpg"); /*Importa a imagem */
+    background-size: cover; /* Redimensiona a imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background: url("../imagens/test.jpg");
+}
+
+.header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1px;
+    padding-bottom: 1px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    
+}
+
+.menu a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.menu a:hover{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.icones img{
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.icones img:hover{
+    width: 35px;
+    height: 35px;
+}
+
+.btn{
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.home{
+    background-image: url("../imagens/fundo6.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.home section{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.conteudo{
+    max-width: 60rem;
+}
+.conteudo h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.conteudo p{
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ecd9d9;
+}
+
+.titulo{
+    font-size: 3.5rem;
+    color: #e1b591;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.sobre .conteudoSobre{
+    display: flex;
+    align-items: center;
+    background-color: #2a140dc9;
+    gap: 1.5rem;
+}
+
+.sobre .conteudoSobre .texto_sobre{
+    padding: 2rem;
+}
+.sobre .conteudoSobre .texto_sobre h3{
+    font-size: 3rem;
+    color: #fff;
+}
+.sobre .conteudoSobre .texto_sobre p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.caixa .imag-produto{
+    width: 150px;
+    height: auto;
+}
+
+.pruduto .caixa_conteudo{
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    
+}
+
+.caixa {
+    cursor: pointer;
+    position: relative;
+    display: inline-block; 
+    text-align: center;
+    padding: 5rem;
+    
+}
+
+.produto .caixa_conteudo .introducao_produto p{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+   
+}
+.descricao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: rgba(230, 219, 219, 0.8);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    pointer-events: none;
+    /* Oculta a descrição inicialmente e desabilita eventos do mouse */
+}
+
+.caixa:hover .descricao {
+    opacity: 1;
+    pointer-events: auto;
+    /* Torna a descrição visível quando o mouse está sobre o produto */
+}
+.produto .caixa_conteudo .caixa h3{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.produto .caixa_conteudo .caixa .preco{
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+.produto .caixa_conteudo .caixa .preco span{
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.cardapio .introducao_cardapio{
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.cardapio .galeria-conteudo{
+    max-width: 1150px;
+    display: flex;
+    justify-content: center
+    
+    
+}
+.cardapio .galeria-conteudo .card{
+    background-color: #341a12e2;
+    flex: 0.40;
+    margin: 0 50px;
+
+   
+}
+.galeria img{
+    max-width: 100%;
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+}
+
+.cardapio .galeria-conteudo .card .galeria .titulo-cafes{
+    text-align: center;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+.cardapio .galeria-conteudo .card .galeria .texto-cardapio p{
+    font-size: 1.3rem;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 20px;
+    font-weight: 600;
+}
+.cardapio .navegacao {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+  }
+
+.cardapio .navegacao button {
+    background-color: #e1b591;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.cardapio .navegacao button:hover {
+    background-color: #fecfa8;
+}
+
+ .caixa .pessoa{
+    width: 50%;
+    height: auto;
+}
+.avaliacoes .caixa_conteudo{
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+.avaliacoes .caixa_conteudo .caixa{
+    border: var(--border);
+}
+.avaliacoes .caixa_conteudo .caixa p{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.avaliacoes .caixa_conteudo .caixa h3{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.endereco{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contato h3{
+    font-size: 2.5rem;
+    color: #e1b591;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.contato form{
+    background-color: #1a1613;
+    padding: 3rem;
+}
+
+.contato {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+.entrada-dados {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.entrada-dados img {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 25px); /* Ajuste para o ícone */
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.contato .btn{
+    align-items: center;
+    margin: 1rem auto; /* Margem automática para alinhar horizontalmente */
+    display: block; 
+}
+.redes{
+    cursor: pointer;
+    margin-left: 73rem;
+}
